@@ -60,11 +60,19 @@
                                     <action selector="salvar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbJ-Wc-Yyb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dados salvol!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svl-3n-5Ni">
+                                <rect key="frame" x="26" y="262" width="362" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="avisoSucesso" destination="svl-3n-5Ni" id="0He-2E-wpZ"/>
                         <outlet property="nomeEmpresa" destination="A8L-Td-K8v" id="1RW-lt-lOd"/>
                         <outlet property="quantidadeEmpresa" destination="frI-31-nPd" id="Tsb-js-ctk"/>
                     </connections>

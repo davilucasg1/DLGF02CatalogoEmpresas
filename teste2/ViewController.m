@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    _avisoSucesso.alpha=0;
 }
 
 
@@ -26,7 +26,9 @@
     e.quantidaField = [self.quantidadeEmpresa.text intValue];
     NSLog(@"empresa criada nome=%@, fucionarios=%d",
           e.nome, e.quantidaField);
-   
+    _avisoSucesso.text = [NSString stringWithFormat:@"empresa criada nome=%@, fucionarios=%d",
+                          e.nome, e.quantidaField];
+    _avisoSucesso.alpha = 1;
     //[e release];
     
 }

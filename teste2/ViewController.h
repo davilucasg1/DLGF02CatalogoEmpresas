@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *nomeEmpresa;
 @property (weak, nonatomic) IBOutlet UITextField *quantidadeEmpresa;
+@property (weak, nonatomic) IBOutlet UILabel *avisoSucesso;
 
 - (IBAction)incrementador:(id)sender;
 - (IBAction)salvar:(id)sender;
