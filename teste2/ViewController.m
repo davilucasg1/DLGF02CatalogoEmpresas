@@ -19,17 +19,29 @@
     _avisoSucesso.alpha=0;
 }
 
+-(void) salvarEmpresa:(dnia *) novaEpresa {
+    if (!catalogo){
+        catalogo = [[NSMutableArray alloc]init];
+    }
+    [catalogo addObject: novaEpresa];
+}
+
+-(void) mostrarCatalogo {
+    NSLog(@"****Listando todas as empresas****");
+    for (dnia *empresa in catalogo){
+        NSLog(@" a empresa %@ tem %d funcionarios",
+              empresa.nome, empresa.quantidaField);
+    }
+    
+}
 
 - (IBAction)salvar:(id)sender {
     dnia *e = [[dnia alloc] init];
     e.nome = self.nomeEmpresa.text;
     e.quantidaField = [self.quantidadeEmpresa.text intValue];
-    NSLog(@"empresa criada nome=%@, fucionarios=%d",
-          e.nome, e.quantidaField);
-    _avisoSucesso.text = [NSString stringWithFormat:@"empresa criada nome=%@, fucionarios=%d",
-                          e.nome, e.quantidaField];
-    _avisoSucesso.alpha = 1;
-    //[e release];
+    
+    [self salvarEmpresa:e];
+    [self mostrarCatalogo];
     
 }
 

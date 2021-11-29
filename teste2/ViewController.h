@@ -8,7 +8,9 @@
 #import <UIKit/UIKit.h>
 #import "dnia.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    NSMutableArray *catalogo;
+}
 @property (weak, nonatomic) IBOutlet UITextField *nomeEmpresa;
 @property (weak, nonatomic) IBOutlet UITextField *quantidadeEmpresa;
 @property (weak, nonatomic) IBOutlet UILabel *avisoSucesso;
